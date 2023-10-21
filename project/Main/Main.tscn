@@ -60,7 +60,7 @@ theme_override_constants/margin_top = 27
 theme_override_constants/margin_right = 27
 theme_override_constants/margin_bottom = 27
 
-[node name="Label" type="Label" parent="CanvasLayer/MarginContainer"]
+[node name="Game Label" type="Label" parent="CanvasLayer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "SPACE ACE

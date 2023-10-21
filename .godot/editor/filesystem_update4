@@ -5,3 +5,9 @@ res://project/Level/level.tscn
 res://project/Level/level.gd
 res://project/Singletons/GameManager.gd
 res://project/Main/Main.gd
+res://project/LevelBackground/LevelBackground.tscn
+res://project/LevelBackground/LevelBackground.gd
+res://project/Player/Player.tscn
+res://project/Player/Player.gd
+res://project/Singletons/GameData.gd
+res://project/Singletons/SoundManager.gd
