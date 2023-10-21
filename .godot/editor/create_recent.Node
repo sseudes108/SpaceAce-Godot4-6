@@ -1,0 +1,8 @@
+TextureRect
+Sprite2D
+AnimatedSprite2D
+Label
+TextureButton
+VBoxContainer
+MarginContainer
+CanvasLayer

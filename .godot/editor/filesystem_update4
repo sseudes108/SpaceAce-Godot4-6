@@ -1,0 +1,7 @@
+res://project/Main/Main.tscn
+res://project/Main/Main.tres
+res://project/Sun/Sun.tscn
+res://project/Level/level.tscn
+res://project/Level/level.gd
+res://project/Singletons/GameManager.gd
+res://project/Main/Main.gd
