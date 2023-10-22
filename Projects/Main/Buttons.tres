@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cgt2k8ffob45m"]
+
+[ext_resource type="FontFile" uid="uid://ly7lrfl6lmda" path="res://Assets/fonts/gemunu-libre-v8-latin-700.ttf" id="1_mrouo"]
+
+[resource]
+font = ExtResource("1_mrouo")
+font_size = 27
+font_color = Color(0, 0.0117647, 0.0588235, 1)

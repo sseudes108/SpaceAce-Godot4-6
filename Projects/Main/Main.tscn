@@ -1,0 +1,110 @@
+[gd_scene load_steps=11 format=3 uid="uid://c1j4mc6cyy2nw"]
+
+[ext_resource type="Script" path="res://Projects/Main/Main.gd" id="1_ivwvq"]
+[ext_resource type="Texture2D" uid="uid://ct62nxaobe74m" path="res://Assets/backgrounds/GalaxyUno.png" id="1_lg54d"]
+[ext_resource type="Texture2D" uid="uid://cf5xudpsu7mqf" path="res://Assets/backgrounds/spr_stars01.png" id="2_8wkyo"]
+[ext_resource type="Texture2D" uid="uid://4r8ew5bn5f8a" path="res://Assets/backgrounds/spr_stars02.png" id="3_mqe76"]
+[ext_resource type="LabelSettings" uid="uid://7nkpjsqxkrt0" path="res://Projects/Main/Main.tres" id="4_ixfyv"]
+[ext_resource type="Texture2D" uid="uid://bhvg7v1duoys3" path="res://Assets/ui/blue_button00.png" id="5_nghau"]
+[ext_resource type="Texture2D" uid="uid://brk1vvi3m5i5q" path="res://Assets/ui/yellow_button00.png" id="6_8g1q2"]
+[ext_resource type="Texture2D" uid="uid://dx00augy8a22p" path="res://Assets/ui/green_button00.png" id="7_n1ruy"]
+[ext_resource type="LabelSettings" uid="uid://cgt2k8ffob45m" path="res://Projects/Main/Buttons.tres" id="8_3gvdu"]
+[ext_resource type="PackedScene" uid="uid://oxec47hmw3m0" path="res://Projects/Sun/Sun.tscn" id="9_b1fl5"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ivwvq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lg54d")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8wkyo")
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_mqe76")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 27
+theme_override_constants/margin_top = 216
+theme_override_constants/margin_right = 27
+theme_override_constants/margin_bottom = 27
+
+[node name="Game Label" type="Label" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Space Ace
+(ish)"
+label_settings = ExtResource("4_ixfyv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 27
+
+[node name="Play Button" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_nghau")
+texture_pressed = ExtResource("6_8g1q2")
+texture_hover = ExtResource("7_n1ruy")
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/Play Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+label_settings = ExtResource("8_3gvdu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit Button" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_nghau")
+texture_pressed = ExtResource("6_8g1q2")
+texture_hover = ExtResource("7_n1ruy")
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/Quit Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+label_settings = ExtResource("8_3gvdu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sun" parent="." instance=ExtResource("9_b1fl5")]
+position = Vector2(87, 82)
+scale = Vector2(0.66, 0.66)
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/Play Button" to="." method="play"]
