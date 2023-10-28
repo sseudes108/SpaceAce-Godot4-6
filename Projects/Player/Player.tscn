@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cfgsjpogq13wl"]
+[gd_scene load_steps=9 format=3 uid="uid://cfgsjpogq13wl"]
 
 [ext_resource type="Script" path="res://Projects/Player/Player.gd" id="1_tk5rr"]
 [ext_resource type="Texture2D" uid="uid://bram62lyukkg0" path="res://Assets/ships/ships_human_1.png" id="2_0juyt"]
+[ext_resource type="PackedScene" uid="uid://0ojqh7knuxge" path="res://Projects/BaseBullet/PlayerBullet/PlayerBullet.tscn" id="2_8c160"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_85jpf"]
 radius = 13.0
@@ -62,9 +63,10 @@ _data = {
 "Turn": SubResource("Animation_o6qq2")
 }
 
-[node name="Player" type="Area2D"]
-scale = Vector2(1.2, 1.2)
+[node name="Player" type="Area2D" groups=["Player"]]
+collision_mask = 4
 script = ExtResource("1_tk5rr")
+bulletScene = ExtResource("2_8c160")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_0juyt")
@@ -80,3 +82,8 @@ autoplay = "Fly"
 libraries = {
 "": SubResource("AnimationLibrary_nq8is")
 }
+
+[node name="FirePoint" type="Marker2D" parent="."]
+position = Vector2(0, -27)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

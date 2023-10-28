@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuau7wscxua1o"]
+
+[ext_resource type="PackedScene" uid="uid://civ7v5wcsbqb4" path="res://Projects/Enemies/EnemyBasics.tscn" id="1_yqos4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4qpn3"]
+radius = 7.33334
+height = 37.3333
+
+[node name="EnemyZipper" instance=ExtResource("1_yqos4")]
+bulletScene = null
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+animation = &"zipper1"
+
+[node name="Marker2D" type="Marker2D" parent="Booms" index="0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, 0.666667)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_4qpn3")
+
+[node name="FirePoint" parent="." index="5"]
+position = Vector2(0, 10)
+
+[node name="HealthBar" parent="." index="6"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.6667
+offset_top = -17.3333
+offset_right = 21.3333
+offset_bottom = -15.3333
+grow_horizontal = 2
+grow_vertical = 2

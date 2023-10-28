@@ -7,16 +7,19 @@ const SCENES = {
 	SCENE.BOOM: preload("res://Projects/Explosion/Boom.tscn")
 }  
 
-func add_child_deferred(child_to_add) -> void:
-	get_tree().root.add_child(child_to_add)
-	
-func call_add_child(child_to_add) -> void:
-	call_deferred("add_child_deferred", child_to_add)
+func add_child_deferred(child_to_add, parent: Node2D) -> void:
+	parent.add_child(child_to_add)
 
-func create_simple_scene(start_pos: Vector2, key: SCENE) -> void:
+func call_add_child(child_to_add, parent: Node2D) -> void:
+	call_deferred("add_child_deferred", child_to_add, parent)
+
+func create_simple_scene(start_pos: Vector2, key: SCENE, parent: Node2D) -> void:
 	var new_exp = SCENES[key].instantiate()
 	new_exp.global_position = start_pos
-	call_add_child(new_exp)
+	call_add_child(new_exp,parent)
 
-func createExplosion(start_pos: Vector2, scene: SCENE) -> void:
-	create_simple_scene(start_pos, scene)
+func createExplosion(start_pos: Vector2, scene: SCENE, parent: Node2D) -> void:
+	create_simple_scene(start_pos, scene, parent)
+
+func createBoom(start_pos: Vector2):
+	create_simple_scene(start_pos, SCENE.BOOM, get_tree().current_scene)

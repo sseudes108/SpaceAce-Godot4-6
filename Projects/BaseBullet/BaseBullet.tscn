@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://byb66n8ptad74"]
+
+[ext_resource type="Script" path="res://Projects/BaseBullet/BaseBullet.gd" id="1_ih2g7"]
+
+[node name="BaseBullet" type="Area2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_ih2g7")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="blowUp"]
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="onScreenExited"]

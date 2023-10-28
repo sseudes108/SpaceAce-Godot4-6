@@ -19,7 +19,6 @@ func make_laser_sound(file_num: int) -> String:
 	return "res://assets/sounds/lasers/sfx_wpn_laser%s.wav" % file_num
 
 func _ready():
-
 	for i in range(1,14):
 		EXPLOSION_SOUNDS.append(load(make_explosion_sound(i)))
 		
@@ -42,7 +41,6 @@ func play_laser_random(audio: AudioStreamPlayer2D):
 func get_sound(file_num: int, sound_list: Array):
 	return sound_list[file_num-1]
 	
-
 func play_power_up_sound(pu_type: GameData.POWERUP_TYPE, audio: AudioStreamPlayer2D):
 	audio.stream = POWER_UP_SOUNDS[pu_type]
 	audio.play()

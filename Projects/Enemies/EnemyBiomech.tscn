@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://bveu14ghx5nyy"]
+
+[ext_resource type="PackedScene" uid="uid://civ7v5wcsbqb4" path="res://Projects/Enemies/EnemyBasics.tscn" id="1_bgy5m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fdrc3"]
+radius = 10.6667
+height = 36.0
+
+[node name="EnemyBiomech" instance=ExtResource("1_bgy5m")]
+shoots = true
+bulletWaitTime = 1.0
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+animation = &"biomech1"
+
+[node name="Marker2D" type="Marker2D" parent="Booms" index="0"]
+position = Vector2(0, 10)
+
+[node name="Marker2D2" type="Marker2D" parent="Booms" index="1"]
+position = Vector2(0, -10.6667)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, -1.33333)
+shape = SubResource("CapsuleShape2D_fdrc3")
+
+[node name="FirePoint" parent="." index="5"]
+position = Vector2(0, 23.3333)
+
+[node name="HealthBar" parent="." index="6"]
+offset_left = -20.0
+offset_top = -28.0
+offset_right = 20.0
+offset_bottom = -26.0

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://0ojqh7knuxge"]
+
+[ext_resource type="PackedScene" uid="uid://byb66n8ptad74" path="res://Projects/BaseBullet/BaseBullet.tscn" id="1_co3qg"]
+[ext_resource type="Texture2D" uid="uid://rbihumbaj5tl" path="res://Assets/lasers/laserBlue03.png" id="2_cp6sk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_al3i0"]
+radius = 3.0
+height = 18.0
+
+[node name="PlayerBullet" instance=ExtResource("1_co3qg")]
+collision_layer = 2
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_cp6sk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+shape = SubResource("CapsuleShape2D_al3i0")
