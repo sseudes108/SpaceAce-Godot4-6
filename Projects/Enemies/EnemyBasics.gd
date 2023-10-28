@@ -22,7 +22,7 @@ var dead: bool = false
 @export var bulletSpeed: float = 200
 @export var bulletDamage: int = 10
 @onready var firePoint = $FirePoint
-const bulletDirection : = Vector2.DOWN
+var bulletDirection : = Vector2.DOWN
 @export var bulletWaitTime: float = 3.0
 @export var bulletWaitTimeVar: float = 0.05
 
@@ -86,11 +86,20 @@ func onCollisionAreaEntered(area):
 	healthBar.takeDamage(20)
 
 func startLaserTimer():
-	laserTimer.wait_time = bulletWaitTime
-	laserTimer.start()
+	Utils.SetAndStartTimer(laserTimer,bulletWaitTime,bulletWaitTimeVar)
+
+func updateShotDirection():
+	if (aimsAtPlayer == false or
+			is_instance_valid(player) == false):
+		return
+		
+	bulletDirection = global_position.direction_to(
+		player.global_position
+		)
 
 func shot():
 	var shot = bulletScene.instantiate()
+	updateShotDirection()
 	shot.setUpBullet(firePoint.global_position, bulletDirection, bulletSpeed, bulletDamage)
 	get_tree().root.add_child(shot)
 	startLaserTimer()

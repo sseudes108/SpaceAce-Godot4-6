@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpkphgnq2oqbn"]
+
+[ext_resource type="Script" path="res://Projects/SaucerManager/SaucerManager.gd" id="1_6ei4u"]
+
+[sub_resource type="Curve2D" id="Curve2D_qmtro"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -180, -88, -402, -8, 402, 8, 384, 364, 0, 0, 0, 0, 944, -72)
+}
+point_count = 3
+
+[node name="SaucerManager" type="Node2D"]
+script = ExtResource("1_6ei4u")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Paths" type="Node2D" parent="."]
+
+[node name="Path2D2" type="Path2D" parent="Paths"]
+position = Vector2(0, -65.6637)
+scale = Vector2(1, 1.02655)
+curve = SubResource("Curve2D_qmtro")
+
+[connection signal="timeout" from="Timer" to="." method="OnTimeout"]

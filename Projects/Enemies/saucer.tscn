@@ -1,0 +1,90 @@
+[gd_scene load_steps=8 format=3 uid="uid://dp5qt11j0xcgr"]
+
+[ext_resource type="Texture2D" uid="uid://b3jx8b6p0dcw2" path="res://Assets/ships/saucer_2.png" id="1_6hcma"]
+[ext_resource type="Script" path="res://Projects/Enemies/Saucer.gd" id="1_gslrg"]
+[ext_resource type="PackedScene" uid="uid://djqiek2j2oxom" path="res://Projects/HealthBar/HealthBar.tscn" id="3_kl3qg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1wyux"]
+radius = 38.0
+
+[sub_resource type="Animation" id="Animation_qoxvc"]
+resource_name = "Spin"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 18.8496]
+}
+
+[sub_resource type="Animation" id="Animation_50hha"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7bfbc"]
+_data = {
+"RESET": SubResource("Animation_50hha"),
+"Spin": SubResource("Animation_qoxvc")
+}
+
+[node name="Saucer" type="PathFollow2D"]
+rotates = false
+script = ExtResource("1_gslrg")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("1_6hcma")
+offset = Vector2(0, 3)
+hframes = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_1wyux")
+
+[node name="Booms" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="Booms"]
+position = Vector2(0, 25)
+
+[node name="Marker2D2" type="Marker2D" parent="Booms"]
+position = Vector2(-20, -12)
+
+[node name="Marker2D3" type="Marker2D" parent="Booms"]
+position = Vector2(20, -12)
+
+[node name="Marker2D4" type="Marker2D" parent="Booms"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Spin"
+libraries = {
+"": SubResource("AnimationLibrary_7bfbc")
+}
+
+[node name="HealthBar" parent="." instance=ExtResource("3_kl3qg")]
+offset_left = -36.0
+offset_top = -45.0
+offset_right = 36.0
+offset_bottom = -43.0
+
+[connection signal="area_entered" from="Area2D" to="." method="onCollisionAreaEntered"]
+[connection signal="died" from="HealthBar" to="." method="die"]

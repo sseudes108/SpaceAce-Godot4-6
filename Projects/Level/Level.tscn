@@ -1,13 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://b5jle13f6c1tb"]
+[gd_scene load_steps=8 format=3 uid="uid://b5jle13f6c1tb"]
 
 [ext_resource type="Script" path="res://Projects/Level/Level.gd" id="1_mppns"]
 [ext_resource type="PackedScene" uid="uid://ou8k1nilkhrd" path="res://Projects/LevelBackground/LevelBackground.tscn" id="1_xg3rq"]
 [ext_resource type="PackedScene" uid="uid://cfgsjpogq13wl" path="res://Projects/Player/Player.tscn" id="2_cjdw2"]
-[ext_resource type="PackedScene" uid="uid://bveu14ghx5nyy" path="res://Projects/Enemies/EnemyBiomech.tscn" id="4_eicrj"]
-[ext_resource type="PackedScene" uid="uid://b3pb332hfa2ah" path="res://Projects/Enemies/EnemyBomber.tscn" id="5_b4d5t"]
-[ext_resource type="PackedScene" uid="uid://cuau7wscxua1o" path="res://Projects/Enemies/EnemyZipper.tscn" id="6_ekvsn"]
+[ext_resource type="PackedScene" uid="uid://b3pb332hfa2ah" path="res://Projects/Enemies/EnemyBomber.tscn" id="5_t1cjk"]
+[ext_resource type="PackedScene" uid="uid://bveu14ghx5nyy" path="res://Projects/Enemies/EnemyBiomech.tscn" id="6_n6e3j"]
 [ext_resource type="PackedScene" uid="uid://hpi3jl542rp8" path="res://Projects/WaveManager/WaveManager.tscn" id="7_fbvaa"]
-[ext_resource type="PackedScene" uid="uid://d3uwpqgk5d6nt" path="res://Projects/PowerUp/PowerUp.tscn" id="8_iuu35"]
+[ext_resource type="PackedScene" uid="uid://cpkphgnq2oqbn" path="res://Projects/SaucerManager/SaucerManager.tscn" id="7_hb70k"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_mppns")
@@ -17,19 +16,18 @@ script = ExtResource("1_mppns")
 [node name="Player" parent="." instance=ExtResource("2_cjdw2")]
 position = Vector2(399, 544)
 
-[node name="EnemyBiomech" parent="." instance=ExtResource("4_eicrj")]
-position = Vector2(562, 151)
-bio = true
-
-[node name="EnemyBomber" parent="." instance=ExtResource("5_b4d5t")]
-position = Vector2(410, 184)
-bomber = true
-
-[node name="EnemyZipper" parent="." instance=ExtResource("6_ekvsn")]
-position = Vector2(239, 151)
-zipper = true
-
 [node name="WaveManagger" parent="." instance=ExtResource("7_fbvaa")]
 
-[node name="PowerUp" parent="." instance=ExtResource("8_iuu35")]
-position = Vector2(662, 87)
+[node name="EnemyBomber" parent="." instance=ExtResource("5_t1cjk")]
+position = Vector2(445, 110)
+bomber = true
+bulletSpeed = 108.0
+
+[node name="EnemyBiomech" parent="." instance=ExtResource("6_n6e3j")]
+position = Vector2(629, 175)
+bio = true
+bulletSpeed = 324.0
+bulletWaitTime = 0.7
+bulletWaitTimeVar = 0.1
+
+[node name="SaucerManager" parent="." instance=ExtResource("7_hb70k")]
