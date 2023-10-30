@@ -36,3 +36,10 @@ func turn(delta):
 
 func move(delta):
 	position += transform.x.normalized() * SPEED * delta
+
+func blowUp():
+	ObjectMaker.createExplosion(global_position, ObjectMaker.SCENE.BOOM, get_tree().current_scene)
+	queue_free()
+
+func OnAreaEntered(area):
+	blowUp()

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698528713
+::res://::1698592776
 icon.png::CompressedTexture2D::2728531808135154415::1697965754::1697965755::1::::<><>::
 ::res://Assets/::1697965754
 ::res://Assets/backgrounds/::1697965803
@@ -85,7 +85,7 @@ progress_ph.png::CompressedTexture2D::6586044046681981888::1697965754::169796579
 squareWhite.png::CompressedTexture2D::2563673801952553570::1697965754::1697965797::1::::<><>::
 square_shadow.png::CompressedTexture2D::681609933278129640::1697965754::1697965797::1::::<><>::
 yellow_button00.png::CompressedTexture2D::3601892063202385884::1697965754::1697965797::1::::<><>::
-::res://Projects/::1698528756
+::res://Projects/::1698530796
 ::res://Projects/BaseBullet/::1698486760
 BaseBullet.gd::GDScript::-1::1698486462::0::1::::<>Area2D<>::
 BaseBullet.tscn::PackedScene::4074955629635774137::1698486760::0::1::::<><>::res://Projects/BaseBullet/BaseBullet.gd
@@ -95,13 +95,14 @@ EnemyBomb.tscn::PackedScene::7368557400753601544::1698140886::0::1::::<><>::uid:
 EnemyBullet.tscn::PackedScene::1256888857911392175::1698140886::0::1::::<><>::uid://byb66n8ptad74
 ::res://Projects/BaseBullet/PlayerBullet/::1698486760
 PlayerBullet.tscn::PackedScene::1784197822714754780::1698486760::0::1::::<><>::uid://byb66n8ptad74
-::res://Projects/Enemies/::1698530714
-EnemyBasics.gd::GDScript::-1::1698530708::0::1::::<>PathFollow2D<>::
+::res://Projects/Enemies/::1698532247
+EnemyBasics.gd::GDScript::-1::1698531220::0::1::::<>PathFollow2D<>::
 EnemyBasics.tscn::PackedScene::5379686104567430375::1698486759::0::1::::<><>::uid://bi8a5nxu38rqm
 EnemyBiomech.tscn::PackedScene::3869906214400836156::1698500243::0::1::::<><>::uid://civ7v5wcsbqb4
 EnemyBomber.tscn::PackedScene::4382786203779292131::1698500219::0::1::::<><>::uid://civ7v5wcsbqb4
 EnemyZipper.tscn::PackedScene::6177890908849711954::1698500219::0::1::::<><>::uid://civ7v5wcsbqb4
-saucer.tscn::PackedScene::8275032846455290957::1698530714::0::1::::<><>::uid://b3jx8b6p0dcw2::::res://Assets/ships/saucer_2.png
+Saucer.gd::GDScript::-1::1698532239::0::1::::<>PathFollow2D<>::
+saucer.tscn::PackedScene::8275032846455290957::1698532247::0::1::::<><>::uid://b3jx8b6p0dcw2::::res://Assets/ships/saucer_2.png<>res://Projects/Enemies/Saucer.gd<>uid://djqiek2j2oxom::::res://Projects/HealthBar/HealthBar.tscn
 ::res://Projects/Explosion/::1697971071
 Boom.gd::GDScript::-1::1697971014::0::1::::<>AnimatedSprite2D<>::
 Boom.tscn::PackedScene::4561630811320402258::1697971048::0::1::::<><>::res://Projects/Explosion/Boom.gd<>uid://douun30qu3aj6
@@ -113,9 +114,9 @@ HealthBar.tscn::PackedScene::7824485134393100228::1698486759::0::1::::<><>::uid:
 ::res://Projects/HomingMissile/::1698504362
 HomingMissile.gd::GDScript::-1::1698504362::0::1::::<>Area2D<>::
 HomingMissile.tscn::PackedScene::2785495990671070213::1698503088::0::1::::<><>::uid://hiau52lnlsw6
-::res://Projects/Level/::1698530714
+::res://Projects/Level/::1698532293
 Level.gd::GDScript::-1::1698486658::0::1::::<>Node2D<>::
-Level.tscn::PackedScene::4511341831847001487::1698530714::0::1::::<><>::res://Projects/Level/Level.gd<>uid://ou8k1nilkhrd::::res://Projects/LevelBackground/LevelBackground.tscn<>uid://cfgsjpogq13wl::::res://Projects/Player/Player.tscn<>uid://b3pb332hfa2ah::::res://Projects/Enemies/EnemyBomber.tscn<>uid://bveu14ghx5nyy::::res://Projects/Enemies/EnemyBiomech.tscn<>uid://hpi3jl542rp8::::res://Projects/WaveManager/WaveManager.tscn
+Level.tscn::PackedScene::4511341831847001487::1698532293::0::1::::<><>::res://Projects/Level/Level.gd<>uid://ou8k1nilkhrd::::res://Projects/LevelBackground/LevelBackground.tscn<>uid://cfgsjpogq13wl::::res://Projects/Player/Player.tscn<>uid://b3pb332hfa2ah::::res://Projects/Enemies/EnemyBomber.tscn<>uid://bveu14ghx5nyy::::res://Projects/Enemies/EnemyBiomech.tscn<>uid://hpi3jl542rp8::::res://Projects/WaveManager/WaveManager.tscn<>uid://cpkphgnq2oqbn::::res://Projects/SaucerManager/SaucerManager.tscn
 ::res://Projects/LevelBackground/::1697969489
 LevelBackground.gd::GDScript::-1::1697967935::0::1::::<>ParallaxBackground<>::
 LevelBackground.tscn::PackedScene::1025954270782137121::1697969489::0::1::::<><>::res://Projects/LevelBackground/LevelBackground.gd<>uid://cf5xudpsu7mqf
@@ -130,9 +131,9 @@ Player.tscn::PackedScene::5137281639888226039::1698455711::0::1::::<><>::res://P
 ::res://Projects/PowerUp/::1698455758
 PowerUp.gd::GDScript::-1::1698455758::0::1::::<>Area2D<>::
 PowerUp.tscn::PackedScene::9167200638911868417::1698455711::0::1::::<><>::uid://cc3buw8i34und
-::res://Projects/SaucerManager/::1698530714
-SaucerManager.gd::GDScript::-1::1698529638::0::1::::<>Node2D<>::
-SaucerManager.tscn::PackedScene::5847241390932291791::1698530714::0::1::::<><>::res://Projects/SaucerManager/SaucerManager.gd
+::res://Projects/SaucerManager/::1698532247
+SaucerManager.gd::GDScript::-1::1698531744::0::1::::<>Node2D<>::
+SaucerManager.tscn::PackedScene::5847241390932291791::1698532247::0::1::::<><>::res://Projects/SaucerManager/SaucerManager.gd
 ::res://Projects/Singletons/::1698487645
 GameData.gd::GDScript::-1::1697973141::0::1::::<>Node<>::
 GameManager.gd::GDScript::-1::1697967307::0::1::::<>Node<>::
@@ -141,6 +142,8 @@ SignalManager.gd::GDScript::-1::1698454408::0::1::::<>Node<>::
 SoundManager.gd::GDScript::-1::1697999723::0::1::::<>Node<>::
 ::res://Projects/Sun/::1697967976
 Sun.tscn::PackedScene::1030372511780580849::1697967976::0::1::::<><>::uid://di5j744fixmvr
+::res://Projects/Utils/::1698531281
+Utils.gd::GDScript::-1::1698531281::0::1::::Utils<>RefCounted<>::
 ::res://Projects/WaveManager/::1698140969
 WaveManager.gd::GDScript::-1::1698109021::0::1::::<>Node2D<>::
 WaveManager.tscn::PackedScene::522823801054489867::1698140969::0::1::::<><>::res://Projects/WaveManager/WaveManager.gd
