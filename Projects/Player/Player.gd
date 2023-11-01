@@ -67,4 +67,4 @@ func powerUpHit(powerUp: GameData.POWERUP_TYPE):
 	print("power up", powerUp)
 
 func _on_area_entered(area):
-	pass # Replace with function body.
+	print("Hit from:", area)

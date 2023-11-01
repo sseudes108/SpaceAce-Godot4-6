@@ -82,7 +82,6 @@ func screenExited():
 	queue_free()
 
 func onCollisionAreaEntered(area):
-	print("Hit - From enemy Base")
 	healthBar.takeDamage(20)
 
 func startLaserTimer():
