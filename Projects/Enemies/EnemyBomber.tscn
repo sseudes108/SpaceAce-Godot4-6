@@ -11,6 +11,8 @@ height = 54.6667
 shoots = true
 aimsAtPlayer = true
 bulletScene = ExtResource("2_wjxvi")
+killPoints = 30
+damageFromPlayer = 10
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 animation = &"bomber1"

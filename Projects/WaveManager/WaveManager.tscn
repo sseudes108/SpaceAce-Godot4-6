@@ -4,13 +4,13 @@
 
 [sub_resource type="Curve2D" id="Curve2D_fyukq"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 282, -62, 0, 0, 0, 0, 275, 726)
+"points": PackedVector2Array(0, 0, 0, 0, 282, -62, 0, 0, 0, 0, 281.838, 424.113, 0, 0, 0, 0, 287, 1025)
 }
-point_count = 2
+point_count = 3
 
-[sub_resource type="Curve2D" id="Curve2D_vkpbd"]
+[sub_resource type="Curve2D" id="Curve2D_3xew5"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -146, 307, 0, 0, 0, 0, 913, 346)
+"points": PackedVector2Array(0, 0, 0, 0, 1438, 277, 0, 0, 0, 0, -161, 270)
 }
 point_count = 2
 
@@ -20,10 +20,21 @@ script = ExtResource("1_074jw")
 [node name="Paths" type="Node2D" parent="."]
 
 [node name="Path2D" type="Path2D" parent="Paths"]
+position = Vector2(0, 945)
+scale = Vector2(1, -1)
 curve = SubResource("Curve2D_fyukq")
 
 [node name="Path2D2" type="Path2D" parent="Paths"]
-curve = SubResource("Curve2D_vkpbd")
+position = Vector2(730, 0)
+curve = SubResource("Curve2D_fyukq")
+
+[node name="Path2D3" type="Path2D" parent="Paths"]
+position = Vector2(0, -76)
+curve = SubResource("Curve2D_3xew5")
+
+[node name="Path2D4" type="Path2D" parent="Paths"]
+position = Vector2(0, 144)
+curve = SubResource("Curve2D_3xew5")
 
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 6.0

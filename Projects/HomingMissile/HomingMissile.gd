@@ -3,6 +3,7 @@ extends Area2D
 
 const ROTATION_SPEED: float = 100
 const SPEED: float = 200
+const KILLPOINTS: int = 5
 
 var player: Player
 
@@ -43,4 +44,6 @@ func blowUp(area):
 	queue_free()
 
 func OnAreaEntered(area):
+	if area.is_in_group("PlayerBullet"):
+		ScoreManager.incrementScore(KILLPOINTS)
 	blowUp(area)

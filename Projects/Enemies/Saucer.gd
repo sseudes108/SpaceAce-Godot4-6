@@ -18,6 +18,9 @@ var dead: bool
 @onready var booms = $Booms
 @onready var healthBar = $HealthBar
 
+@export var killPoints: int = 70
+@export var damageFromPlayer: int = 20
+
 func _ready():
 	progress_ratio = 0.0
 
@@ -41,10 +44,11 @@ func die():
 	set_process(false)
 	makeDieExplosions()
 	await get_tree().create_timer(BOOM_DELAY * 4).timeout
+	ScoreManager.incrementScore(killPoints)
 	queue_free()
 
 func onCollisionAreaEntered(area):
-	healthBar.takeDamage(20)
+	healthBar.takeDamage(damageFromPlayer)
 
 func TryShoot():
 	if abs(progress_ratio - FIRE_OFFSETS[shootsFired]) < SHOOT_PROGRESS:

@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpkphgnq2oqbn"]
+[gd_scene load_steps=4 format=3 uid="uid://cpkphgnq2oqbn"]
 
 [ext_resource type="Script" path="res://Projects/SaucerManager/SaucerManager.gd" id="1_6ei4u"]
 
 [sub_resource type="Curve2D" id="Curve2D_qmtro"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -180, -88, -402, -8, 402, 8, 384, 364, 0, 0, 0, 0, 944, -72)
+"points": PackedVector2Array(0, 0, 0, 0, -330, -83.7757, -404, -2.15518, 404, 2.15518, 438, 444.206, 0, 0, 0, 0, 1196, -56.4999)
 }
 point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_mrqk0"]
+_data = {
+"points": PackedVector2Array(-760.17, -2509.23, 760.17, 2509.23, -62, -107, 0, 0, 0, 0, 1347, -121)
+}
+point_count = 2
 
 [node name="SaucerManager" type="Node2D"]
 script = ExtResource("1_6ei4u")
@@ -16,8 +22,13 @@ script = ExtResource("1_6ei4u")
 [node name="Paths" type="Node2D" parent="."]
 
 [node name="Path2D2" type="Path2D" parent="Paths"]
-position = Vector2(0, -65.6637)
+position = Vector2(196, -64)
 scale = Vector2(1, 1.02655)
 curve = SubResource("Curve2D_qmtro")
+
+[node name="Path2D" type="Path2D" parent="Paths"]
+position = Vector2(1279.99, -95.379)
+scale = Vector2(-1.01431, 1)
+curve = SubResource("Curve2D_mrqk0")
 
 [connection signal="timeout" from="Timer" to="." method="OnTimeout"]

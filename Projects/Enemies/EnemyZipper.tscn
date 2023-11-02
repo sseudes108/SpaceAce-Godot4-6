@@ -8,6 +8,7 @@ height = 37.3333
 
 [node name="EnemyZipper" instance=ExtResource("1_yqos4")]
 bulletScene = null
+killPoints = 10
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 animation = &"zipper1"

@@ -21,6 +21,10 @@ var dead: bool = false
 @export var bulletScene: PackedScene
 @export var bulletSpeed: float = 200
 @export var bulletDamage: int = 10
+
+@export var killPoints: int = 20
+@export var damageFromPlayer: int = 20
+
 @onready var firePoint = $FirePoint
 var bulletDirection : = Vector2.DOWN
 @export var bulletWaitTime: float = 3.0
@@ -82,7 +86,7 @@ func screenExited():
 	queue_free()
 
 func onCollisionAreaEntered(area):
-	healthBar.takeDamage(20)
+	healthBar.takeDamage(damageFromPlayer)
 
 func startLaserTimer():
 	Utils.SetAndStartTimer(laserTimer,bulletWaitTime,bulletWaitTimeVar)
@@ -104,4 +108,5 @@ func shot():
 	startLaserTimer()
 
 func onDied():
+	ScoreManager.incrementScore(killPoints)
 	die()
