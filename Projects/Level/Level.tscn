@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5jle13f6c1tb"]
+[gd_scene load_steps=9 format=3 uid="uid://b5jle13f6c1tb"]
 
 [ext_resource type="Script" path="res://Projects/Level/Level.gd" id="1_mppns"]
 [ext_resource type="PackedScene" uid="uid://ou8k1nilkhrd" path="res://Projects/LevelBackground/LevelBackground.tscn" id="1_xg3rq"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bveu14ghx5nyy" path="res://Projects/Enemies/EnemyBiomech.tscn" id="6_n6e3j"]
 [ext_resource type="PackedScene" uid="uid://hpi3jl542rp8" path="res://Projects/WaveManager/WaveManager.tscn" id="7_fbvaa"]
 [ext_resource type="PackedScene" uid="uid://cpkphgnq2oqbn" path="res://Projects/SaucerManager/SaucerManager.tscn" id="7_hb70k"]
+[ext_resource type="PackedScene" uid="uid://62qc6uf3tev8" path="res://Projects/GameUI/GameUI.tscn" id="8_d05xh"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_mppns")
@@ -31,3 +32,7 @@ bulletWaitTime = 0.7
 bulletWaitTimeVar = 0.1
 
 [node name="SaucerManager" parent="." instance=ExtResource("7_hb70k")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameUI" parent="CanvasLayer" instance=ExtResource("8_d05xh")]

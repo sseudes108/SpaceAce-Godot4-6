@@ -365,7 +365,7 @@ one_shot = true
 
 [node name="Booms" type="Node2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["EnemyShip"]]
 collision_layer = 4
 collision_mask = 2
 

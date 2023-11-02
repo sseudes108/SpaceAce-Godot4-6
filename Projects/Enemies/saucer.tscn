@@ -168,7 +168,7 @@ graph_offset = Vector2(103, -20)
 rotates = false
 script = ExtResource("1_gslrg")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["Saucer"]]
 collision_layer = 4
 collision_mask = 2
 
@@ -204,6 +204,8 @@ offset_left = -36.0
 offset_top = -45.0
 offset_right = 36.0
 offset_bottom = -43.0
+midHealth = 100
+startHealth = 200
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_5bcwh")

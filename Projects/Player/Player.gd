@@ -72,4 +72,38 @@ func powerUpHit(powerUp: GameData.POWERUP_TYPE):
 
 func _on_area_entered(area):
 	if shieldActive == false:
-		print("Hit from:", area)
+		if area.is_in_group("EnemyShip"):
+			SignalManager.onPlayerHit.emit(GameData.COLLISION_DAMAGE)
+			print("EnemyShip ",GameData.COLLISION_DAMAGE)
+			
+		if area.is_in_group("Saucer"):
+			SignalManager.onPlayerHit.emit(GameData.SAUCER_COLLISION_DAMAGE)
+			print("Saucer ",GameData.SAUCER_COLLISION_DAMAGE)
+			
+		if area.is_in_group("EnemyBullet"):
+			SignalManager.onPlayerHit.emit(GameData.BULLET_DAMAGE)
+			print("EnemyBullet ", GameData.BULLET_DAMAGE)
+			
+		if area.is_in_group("EnemyBomb"):
+			SignalManager.onPlayerHit.emit(GameData.BOMB_DAMAGE)
+			print("EnemyBomb ",GameData.BOMB_DAMAGE)
+			
+		if area.is_in_group("Missile"):
+			SignalManager.onPlayerHit.emit(GameData.MISSILE_DAMAGE)
+			print("Missile ",GameData.MISSILE_DAMAGE)
+			
+		if area.is_in_group("PowerUp"):
+			print("PowerUp")
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,6 +9,7 @@ var missile: PackedScene = preload("res://Projects/HomingMissile/HomingMissile.t
 const SPEED: float = 0.05
 const SHOOT_PROGRESS: float = 0.02
 const FIRE_OFFSETS = [0.25, 0.5, 0.75]
+const BOOM_DELAY: float = 0.15
 
 var shooting: bool =  false
 var shootsFired: int = 0
@@ -29,6 +30,8 @@ func _process(delta):
 func makeDieExplosions():
 	for b in booms.get_children():
 		ObjectMaker.createBoom(b.global_position)
+		await get_tree().create_timer(BOOM_DELAY).timeout
+
 
 func die():
 	if dead == true:
@@ -37,6 +40,7 @@ func die():
 	
 	set_process(false)
 	makeDieExplosions()
+	await get_tree().create_timer(BOOM_DELAY * 4).timeout
 	queue_free()
 
 func onCollisionAreaEntered(area):
