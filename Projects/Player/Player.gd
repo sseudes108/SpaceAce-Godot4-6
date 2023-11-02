@@ -10,12 +10,15 @@ var upperLeft: Vector2
 var lowerRight: Vector2
 
 @export var speed: float = 216
+@onready var shield = $Shield
 
 @export var bulletScene: PackedScene
 @export var bulletSpeed: float = 420
 @export var bulletDamage: int = 10
 @onready var firePoint = $FirePoint
 const bulletDirection : = Vector2.UP
+
+var shieldActive: bool = false
 
 func _ready():
 	SignalManager.powerUpHit.connect(powerUpHit)
@@ -64,7 +67,9 @@ func shot():
 		get_tree().root.add_child(shot)
 
 func powerUpHit(powerUp: GameData.POWERUP_TYPE):
-	print("power up", powerUp)
+	if powerUp == GameData.POWERUP_TYPE.SHIELD:
+		shield.enableShield()
 
 func _on_area_entered(area):
-	print("Hit from:", area)
+	if shieldActive == false:
+		print("Hit from:", area)

@@ -47,23 +47,6 @@ tracks/2/keys = {
 "values": [false]
 }
 
-[sub_resource type="Animation" id="Animation_qoxvc"]
-resource_name = "Spin"
-length = 6.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Area2D/Sprite2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 18.8496]
-}
-
 [sub_resource type="Animation" id="Animation_gj1jd"]
 resource_name = "Shoot"
 length = 2.6
@@ -135,6 +118,23 @@ tracks/4/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_qoxvc"]
+resource_name = "Spin"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 18.8496]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7bfbc"]
 _data = {
 "RESET": SubResource("Animation_50hha"),
@@ -170,7 +170,7 @@ script = ExtResource("1_gslrg")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 4
-collision_mask = 3
+collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 texture = ExtResource("1_6hcma")

@@ -5,10 +5,11 @@ const SPEED: float = 100
 @onready var sprite = $Sprite2D
 @onready var sound = $Sound
 
-var powerUpType:  GameData.POWERUP_TYPE = GameData.POWERUP_TYPE.SHIELD
+var powerUpType:  GameData.POWERUP_TYPE = GameData.POWERUP_TYPE.HEALTH
 
 func _ready():
-	SetPowerUpType(GameData.POWERUP_TYPE.HEALTH)
+	SetPowerUpType(powerUpType)
+	sprite.texture = GameData.POWER_UPS[powerUpType]
 	SoundManager.play_powerup_deploy_sound(sound)
 
 func _process(delta):
@@ -16,7 +17,6 @@ func _process(delta):
 
 func SetPowerUpType(pu: GameData.POWERUP_TYPE):
 	powerUpType = pu
-	sprite.texture = GameData.POWER_UPS[powerUpType]
 
 func OnScreenExited():
 	queue_free()

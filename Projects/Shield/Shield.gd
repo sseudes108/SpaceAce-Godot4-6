@@ -1,23 +1,50 @@
 extends Area2D
 
+@export var startHealth: int = 5
+var health: int = startHealth
+
 @onready var timer = $Timer
+@onready var collisionShape = $CollisionShape2D
+@onready var animationPlayer = $AnimationPlayer
+@onready var sound = $Sound
 
-# Called when the node enters the scene tree for the first time.
+@onready var shield = $"."
+
+var player: Player
+
 func _ready():
-	hide()
+	getPlayerRef()
+	disableShield()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if Input.is_action_pressed("Testing"):
-		show()
-		timer.start()
+func getPlayerRef():
+	player = get_tree().get_first_node_in_group("Player")
+	if !player:
+		queue_free()
 
 func Timeout():
+	disableShield()
+
+func disableShield():
+	collisionShape.call_deferred("set", "disable", true)
+	player.shieldActive = false
+	timer.stop
 	hide()
 
-func ShieldLogic(process: bool):
-	set_process(process)
-	if process == true:
-		show()
-	else:
-		hide()
+func enableShield():
+	collisionShape.call_deferred("set", "disable", false)
+	player.shieldActive = true
+	health = startHealth
+	show()
+	timer.start()
+	SoundManager.play_power_up_sound(GameData.POWERUP_TYPE.SHIELD, sound)
+
+func Hit():
+	animationPlayer.play("Hit")
+	health-=1
+	print(health)
+	if health == 0:
+		disableShield()
+
+func AreaEntered(area):
+	if player.shieldActive == true:
+		Hit()
