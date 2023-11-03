@@ -12,6 +12,8 @@ var lowerRight: Vector2
 @export var speed: float = 216
 @onready var shield = $Shield
 
+@export var heatlhBonus: float = 30
+
 @export var bulletScene: PackedScene
 @export var bulletSpeed: float = 420
 @export var bulletDamage: int = 10
@@ -64,11 +66,13 @@ func shot():
 	if Input.is_action_just_pressed("shot") == true:
 		var shot = bulletScene.instantiate()
 		shot.setUpBullet(firePoint.global_position, bulletDirection, bulletSpeed, bulletDamage)
-		get_tree().root.add_child(shot)
+		get_tree().current_scene.add_child(shot)
 
 func powerUpHit(powerUp: GameData.POWERUP_TYPE):
 	if powerUp == GameData.POWERUP_TYPE.SHIELD:
 		shield.enableShield()
+	if powerUp == GameData.POWERUP_TYPE.HEALTH:
+		SignalManager.playerHealthBonus.emit(heatlhBonus)
 
 func _on_area_entered(area):
 	if shieldActive == false:
@@ -91,19 +95,3 @@ func _on_area_entered(area):
 		if area.is_in_group("Missile"):
 			SignalManager.onPlayerHit.emit(GameData.MISSILE_DAMAGE)
 			print("Missile ",GameData.MISSILE_DAMAGE)
-			
-		if area.is_in_group("PowerUp"):
-			print("PowerUp")
-
-
-
-
-
-
-
-
-
-
-
-
-

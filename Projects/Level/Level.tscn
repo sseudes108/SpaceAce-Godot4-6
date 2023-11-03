@@ -3,12 +3,12 @@
 [ext_resource type="Script" path="res://Projects/Level/Level.gd" id="1_mppns"]
 [ext_resource type="PackedScene" uid="uid://ou8k1nilkhrd" path="res://Projects/LevelBackground/LevelBackground.tscn" id="1_xg3rq"]
 [ext_resource type="PackedScene" uid="uid://cfgsjpogq13wl" path="res://Projects/Player/Player.tscn" id="2_cjdw2"]
-[ext_resource type="PackedScene" uid="uid://b3pb332hfa2ah" path="res://Projects/Enemies/EnemyBomber.tscn" id="5_t1cjk"]
-[ext_resource type="PackedScene" uid="uid://bveu14ghx5nyy" path="res://Projects/Enemies/EnemyBiomech.tscn" id="6_n6e3j"]
 [ext_resource type="PackedScene" uid="uid://hpi3jl542rp8" path="res://Projects/WaveManager/WaveManager.tscn" id="7_fbvaa"]
 [ext_resource type="PackedScene" uid="uid://cpkphgnq2oqbn" path="res://Projects/SaucerManager/SaucerManager.tscn" id="7_hb70k"]
 [ext_resource type="PackedScene" uid="uid://62qc6uf3tev8" path="res://Projects/GameUI/GameUI.tscn" id="8_d05xh"]
 [ext_resource type="PackedScene" uid="uid://ngwx67va7rh0" path="res://Projects/ShakeCam/ShakeCam.tscn" id="9_c50m0"]
+[ext_resource type="PackedScene" uid="uid://cmx5qrftxp81c" path="res://Projects/GameOver/GameOver.tscn" id="9_pmill"]
+[ext_resource type="AudioStream" uid="uid://ya0irh3jupku" path="res://Assets/sounds/loops/Mercury.wav" id="11_12g1s"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_mppns")
@@ -20,23 +20,19 @@ position = Vector2(399, 544)
 
 [node name="WaveManagger" parent="." instance=ExtResource("7_fbvaa")]
 
-[node name="EnemyBomber" parent="." instance=ExtResource("5_t1cjk")]
-position = Vector2(445, 110)
-bomber = true
-bulletSpeed = 108.0
-
-[node name="EnemyBiomech" parent="." instance=ExtResource("6_n6e3j")]
-position = Vector2(629, 175)
-bio = true
-bulletSpeed = 324.0
-bulletWaitTime = 0.7
-bulletWaitTimeVar = 0.1
-
 [node name="SaucerManager" parent="." instance=ExtResource("7_hb70k")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GameUI" parent="CanvasLayer" instance=ExtResource("8_d05xh")]
 
+[node name="GameOver" parent="CanvasLayer" instance=ExtResource("9_pmill")]
+size_flags_horizontal = 4
+
 [node name="ShakeCamera" parent="." instance=ExtResource("9_c50m0")]
 anchor_mode = 0
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_12g1s")
+volume_db = -6.0
+autoplay = true

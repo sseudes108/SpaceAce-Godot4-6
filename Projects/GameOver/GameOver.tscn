@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmx5qrftxp81c"]
+
+[ext_resource type="Script" path="res://Projects/GameOver/GameOver.gd" id="1_8e64s"]
+[ext_resource type="FontFile" uid="uid://sfe6nbk2kd45" path="res://Assets/fonts/LuckiestGuy-Regular.ttf" id="1_dsob4"]
+[ext_resource type="FontFile" uid="uid://ly7lrfl6lmda" path="res://Assets/fonts/gemunu-libre-v8-latin-700.ttf" id="2_lwbv8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jergi"]
+font = ExtResource("1_dsob4")
+font_size = 108
+font_color = Color(0.701961, 0, 0.0117647, 1)
+outline_size = 9
+
+[sub_resource type="LabelSettings" id="LabelSettings_7uldd"]
+font = ExtResource("2_lwbv8")
+font_size = 54
+font_color = Color(0.929412, 0.960784, 1, 1)
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8e64s")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.372549, 0, 0.529412, 0.231373)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -271.5
+offset_top = -122.0
+offset_right = 271.5
+offset_bottom = 122.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Game Over" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_jergi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "SCORE: 0000"
+label_settings = SubResource("LabelSettings_7uldd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BestScore" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "BEST SCORE: 0000
+"
+label_settings = SubResource("LabelSettings_7uldd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="onTimeout"]

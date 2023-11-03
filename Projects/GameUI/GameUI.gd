@@ -12,7 +12,7 @@ func _ready():
 
 func OnHealthBarDied():
 	SignalManager.playerDied.emit()
-	GameManager.loadMainScene()
+	#GameManager.loadMainScene()
 
 func scoreUpdate(v:int):
 	scoreLabel.text = "%06d" % v

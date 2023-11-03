@@ -10,6 +10,7 @@ extends PathFollow2D
 @onready var animatedSprite = $AnimatedSprite2D
 @onready var laserTimer = $LaserTimer
 @onready var booms = $Booms
+@onready var sound = $Sound
 
 var player: Player
 
@@ -31,6 +32,8 @@ var bulletDirection : = Vector2.DOWN
 @export var bulletWaitTimeVar: float = 0.05
 
 @onready var healthBar = $HealthBar
+
+@export var powerUpChance: float = 0.7
 
 func _ready():
 	if bomber == true:
@@ -64,6 +67,10 @@ func progressRatio(delta):
 	if progress_ratio > 0.99:
 		queue_free()
 
+func createPowerUp():
+	if randf() < powerUpChance:
+		ObjectMaker.createRandomPowerUp(global_position)
+
 func makeDieExplosions():
 	for b in booms.get_children():
 		ObjectMaker.createBoom(b.global_position)
@@ -73,6 +80,7 @@ func die():
 		return
 	dead = true
 	
+	createPowerUp()
 	set_process(false)
 	makeDieExplosions()
 	queue_free()
@@ -101,10 +109,11 @@ func updateShotDirection():
 		)
 
 func shot():
+	SoundManager.play_laser_random(sound)
 	var shot = bulletScene.instantiate()
 	updateShotDirection()
 	shot.setUpBullet(firePoint.global_position, bulletDirection, bulletSpeed, bulletDamage)
-	get_tree().root.add_child(shot)
+	get_tree().current_scene.add_child(shot)
 	startLaserTimer()
 
 func onDied():

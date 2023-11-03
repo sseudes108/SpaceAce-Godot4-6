@@ -31,3 +31,9 @@ func LoadScores():
 func SaveScores():
 	var scoreFile = FileAccess.open(SCOREFILE, FileAccess.WRITE)
 	scoreFile.store_string(JSON.stringify(highScore))
+
+func getScore() -> int:
+	return score
+
+func getBestScore() -> int:
+	return highScore

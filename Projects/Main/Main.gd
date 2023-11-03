@@ -4,4 +4,4 @@ func play():
 	GameManager.loadLevelScene()
 
 func quit():
-	pass
+	get_tree().quit()

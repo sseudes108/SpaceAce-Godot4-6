@@ -6,7 +6,7 @@ extends PathFollow2D
 
 var missile: PackedScene = preload("res://Projects/HomingMissile/HomingMissile.tscn")
 
-const SPEED: float = 0.05
+const SPEED: float = 0.03
 const SHOOT_PROGRESS: float = 0.02
 const FIRE_OFFSETS = [0.25, 0.5, 0.75]
 const BOOM_DELAY: float = 0.15
@@ -20,6 +20,8 @@ var dead: bool
 
 @export var killPoints: int = 70
 @export var damageFromPlayer: int = 20
+
+@export var powerUpChance: float = 2
 
 func _ready():
 	progress_ratio = 0.0
@@ -35,11 +37,16 @@ func makeDieExplosions():
 		ObjectMaker.createBoom(b.global_position)
 		await get_tree().create_timer(BOOM_DELAY).timeout
 
+func createPowerUp():
+	if randf() < powerUpChance:
+		ObjectMaker.createRandomPowerUp(global_position)
 
 func die():
 	if dead == true:
 		return
 	dead = true
+	
+	createPowerUp()
 	
 	set_process(false)
 	makeDieExplosions()
@@ -69,5 +76,5 @@ func queueFreeCheck():
 
 func shot():
 	var miss = missile.instantiate()
-	get_tree().root.add_child(miss)
+	get_tree().current_scene.add_child(miss)
 	miss.global_position = global_position
