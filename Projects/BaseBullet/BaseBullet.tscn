@@ -9,5 +9,7 @@ script = ExtResource("1_ih2g7")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenNotifier2D" parent="."]
 
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="area_entered" from="." to="." method="blowUp"]
 [connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="onScreenExited"]

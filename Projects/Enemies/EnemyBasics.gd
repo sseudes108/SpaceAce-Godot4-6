@@ -35,6 +35,35 @@ var bulletDirection : = Vector2.DOWN
 
 @export var powerUpChance: float = 0.7
 
+
+var lsr1 = preload("res://Assets/sounds/lasers/sfx_wpn_laser1.wav")
+var lsr2 = preload("res://Assets/sounds/lasers/sfx_wpn_laser2.wav")
+var lsr3 = preload("res://Assets/sounds/lasers/sfx_wpn_laser3.wav")
+var lsr4 = preload("res://Assets/sounds/lasers/sfx_wpn_laser4.wav")
+var lsr5 = preload("res://Assets/sounds/lasers/sfx_wpn_laser5.wav")
+var lsr6 = preload("res://Assets/sounds/lasers/sfx_wpn_laser6.wav")
+var lsr7 = preload("res://Assets/sounds/lasers/sfx_wpn_laser7.wav")
+var lsr8 = preload("res://Assets/sounds/lasers/sfx_wpn_laser8.wav")
+var lsr9 = preload("res://Assets/sounds/lasers/sfx_wpn_laser9.wav")
+var lsr10 = preload("res://Assets/sounds/lasers/sfx_wpn_laser10.wav")
+var lsr11 = preload("res://Assets/sounds/lasers/sfx_wpn_laser11.wav")
+var lsr12 = preload("res://Assets/sounds/lasers/sfx_wpn_laser12.wav")
+
+var laserSounds = [
+	lsr1,
+	lsr2,
+	lsr3,
+	lsr4,
+	lsr5,
+	lsr6,
+	lsr7,
+	lsr8,
+	lsr9,
+	lsr10,
+	lsr11,
+	lsr12
+]
+
 func _ready():
 	if bomber == true:
 		enemyName = "bomber1"
@@ -93,7 +122,7 @@ func screenExited():
 	set_process(false)
 	queue_free()
 
-func onCollisionAreaEntered(area):
+func onCollisionAreaEntered(_area):
 	healthBar.takeDamage(damageFromPlayer)
 
 func startLaserTimer():
@@ -108,12 +137,17 @@ func updateShotDirection():
 		player.global_position
 		)
 
+func laserSound():
+	var soundToPlay = laserSounds.pick_random()
+	sound.stream = soundToPlay
+	sound.play()
+
 func shot():
-	SoundManager.play_laser_random(sound)
-	var shot = bulletScene.instantiate()
+	laserSound()
+	var projectile = bulletScene.instantiate()
 	updateShotDirection()
-	shot.setUpBullet(firePoint.global_position, bulletDirection, bulletSpeed, bulletDamage)
-	get_tree().current_scene.add_child(shot)
+	projectile.setUpBullet(firePoint.global_position, bulletDirection, bulletSpeed, bulletDamage)
+	get_tree().current_scene.add_child(projectile)
 	startLaserTimer()
 
 func onDied():

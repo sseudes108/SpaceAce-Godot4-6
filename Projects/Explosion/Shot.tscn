@@ -132,5 +132,6 @@ frame_progress = 1.0
 script = ExtResource("2_6v8mi")
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
+autoplay = true
 
 [connection signal="animation_finished" from="." to="." method="onAnimationEnd"]

@@ -1,8 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699025097
+::res://::1699200147
+export_presets.cfg::TextFile::-1::1699193828::0::1::::<><>::
 icon.png::CompressedTexture2D::2728531808135154415::1697965754::1697965755::1::::<><>::
-::res://Assets/::1697965754
-::res://Assets/backgrounds/::1697965803
+::res://Assets/::1699178776
+::res://Assets/backgrounds/::1699178767
 GalaxyUno.png::CompressedTexture2D::6172088889684809430::1697965752::1697965798::1::::<><>::
 spr_stars01.png::CompressedTexture2D::5187149306497837077::1697965752::1697965803::1::::<><>::
 spr_stars02.png::CompressedTexture2D::2072582893180697686::1697965752::1697965803::1::::<><>::
@@ -15,8 +16,9 @@ circle_bomb_red-Sheet.png::CompressedTexture2D::3549855668370011338::1697965752:
 laserBlue03.png::CompressedTexture2D::1195774025150556657::1697965752::1697965798::1::::<><>::
 laserRed03.png::CompressedTexture2D::9042638049783045060::1697965752::1697965798::1::::<><>::
 spaceMissiles_040.png::CompressedTexture2D::507874261304642331::1697965752::1697965798::1::::<><>::
-::res://Assets/misc/::1697965801
+::res://Assets/misc/::1699173247
 exp2_0.png::CompressedTexture2D::5219710542014279144::1697965752::1697965799::1::::<><>::
+Explosion.png::CompressedTexture2D::929226753645141553::1699173247::1699173247::1::::<><>::
 EXPLOSION_ANIMATION.png::CompressedTexture2D::8184432482297753777::1697965752::1697965799::1::::<><>::
 helper.png::CompressedTexture2D::2761826306767385737::1697965752::1697965799::1::::<><>::
 powerupGreen_bolt.png::CompressedTexture2D::676375471022581528::1697965752::1697965799::1::::<><>::
@@ -68,7 +70,7 @@ sfx_wpn_laser9.wav::AudioStreamWAV::7910963487410952759::1697965753::1697965804:
 sfx_wpn_laser10.wav::AudioStreamWAV::8569300210113033593::1697965753::1697965804::1::::<><>::
 sfx_wpn_laser11.wav::AudioStreamWAV::852702894764539690::1697965753::1697965804::1::::<><>::
 sfx_wpn_laser12.wav::AudioStreamWAV::2699865920927201170::1697965753::1697965804::1::::<><>::
-::res://Assets/sounds/loops/::1699025175
+::res://Assets/sounds/loops/::1699025239
 Mercury.wav::AudioStreamWAV::1686065363478784020::1697965754::1699025239::1::::<><>::
 TitleScreen.mp3::AudioStreamMP3::7798061962707773985::1697965754::1699025175::1::::<><>::
 ::res://Assets/sounds/misc/::1697965804
@@ -85,80 +87,132 @@ progress_ph.png::CompressedTexture2D::6586044046681981888::1697965754::169796579
 squareWhite.png::CompressedTexture2D::2563673801952553570::1697965754::1697965797::1::::<><>::
 square_shadow.png::CompressedTexture2D::681609933278129640::1697965754::1697965797::1::::<><>::
 yellow_button00.png::CompressedTexture2D::3601892063202385884::1697965754::1697965797::1::::<><>::
+::res://Build/::1699200163
+index.apple-touch-icon.png::CompressedTexture2D::4093667877484200815::1699200149::1699200340::1::::<><>::
+index.icon.png::CompressedTexture2D::2398488783394958143::1699200149::1699200340::1::::<><>::
+index.png::CompressedTexture2D::8065789238926862481::1699200149::1699200340::1::::<><>::
+::res://CA/::1699189092
+Main Ship - Shields - Front Shield.png::CompressedTexture2D::1405605558285673102::1645801161::1699183241::1::::<><>::
+Main Ship - Shields - Round Shield.png::CompressedTexture2D::7401974125824755444::1645801161::1699179108::1::::<><>::
+Main ship weapon - Projectile - Rocket.png::CompressedTexture2D::7080773133579383160::1645801161::1699178337::1::::<><>::
+spaceship shooter .ogg::AudioStreamOggVorbis::8333205374001283742::1699178746::1699178777::1::::<><>::
+::res://CA/Blue Nebula/::1699179402
+Blue_Nebula_01-1024x1024.png::CompressedTexture2D::1326851271118143108::1699176531::1699176539::1::::<><>::
+Blue_Nebula_02-1024x1024.png::CompressedTexture2D::2530152304698119235::1699176531::1699176539::1::::<><>::
+Blue_Nebula_03-1024x1024.png::CompressedTexture2D::1105916041261633656::1699176531::1699176539::1::::<><>::
+Blue_Nebula_04-1024x1024.png::CompressedTexture2D::9061881254867981007::1699176531::1699176538::1::::<><>::
+Blue_Nebula_05-1024x1024.png::CompressedTexture2D::1038012054353219091::1699176531::1699176538::1::::<><>::
+Blue_Nebula_06-1024x1024.png::CompressedTexture2D::3490105538509436295::1699176531::1699176538::1::::<><>::
+Blue_Nebula_08-1024x1024.png::CompressedTexture2D::4283991310253578615::1699176531::1699176537::1::::<><>::
+::res://CA/Fonts/::1699189621
+1.1_Divinity.Italic.ttf::FontFile::5804624530630698276::1611693242::1699189096::1::::<><>::
+1.1_Divinity.Regular.ttf::FontFile::2399479756628617491::1611693234::1699189096::1::::<><>::
+Blazma-Italic.ttf::FontFile::1524323564477647358::1648520660::1699189621::1::::<><>::
+Blazma-Regular.ttf::FontFile::9181348441875278949::1648520556::1699189621::1::::<><>::
+::res://CA/Green Nebula/::1699176537
+Green_Nebula_01-1024x1024.png::CompressedTexture2D::6738297149184701884::1699176531::1699176537::1::::<><>::
+Green_Nebula_02-1024x1024.png::CompressedTexture2D::4953808948127776235::1699176531::1699176536::1::::<><>::
+Green_Nebula_03-1024x1024.png::CompressedTexture2D::5586527321858630794::1699176531::1699176536::1::::<><>::
+Green_Nebula_04-1024x1024.png::CompressedTexture2D::618011919266924835::1699176531::1699176536::1::::<><>::
+Green_Nebula_05-1024x1024.png::CompressedTexture2D::7467762461003763957::1699176531::1699176536::1::::<><>::
+Green_Nebula_06-1024x1024.png::CompressedTexture2D::4535904795814353340::1699176531::1699176535::1::::<><>::
+Green_Nebula_07-1024x1024.png::CompressedTexture2D::1357659190731837935::1699176531::1699176535::1::::<><>::
+Green_Nebula_08-1024x1024.png::CompressedTexture2D::3775450565473183440::1699176531::1699176535::1::::<><>::
+::res://CA/Musics/::1699177842
+Billy's Sacrifice.mp3::AudioStreamMP3::513358108748833766::1699177840::1699177841::1::::<><>::
+Checking Manifest.mp3::AudioStreamMP3::160470051443982534::1699177840::1699177841::1::::<><>::
+Crash Landing.mp3::AudioStreamMP3::3595691599003295652::1699177841::1699177841::1::::<><>::
+DOS-88 - Automatav2.mp3::AudioStreamMP3::7259910722696343616::1699177841::1699177841::1::::<><>::
+DOS-88 - City Stomper.mp3::AudioStreamMP3::412852821444036962::1699177841::1699177842::1::::<><>::
+DOS-88 - Far away.mp3::AudioStreamMP3::5626261154703587204::1699177841::1699177842::1::::<><>::
+Parabola.mp3::AudioStreamMP3::835576999725601652::1699177841::1699177842::1::::<><>::
+Race to Mars.mp3::AudioStreamMP3::3161823955057169710::1699177840::1699177842::1::::<><>::
+Smooth Sailing.mp3::AudioStreamMP3::7507732344473402361::1699177840::1699177842::1::::<><>::
+::res://CA/Purple Nebula/::1699176534
+Purple_Nebula_01-1024x1024.png::CompressedTexture2D::6912466823158066050::1699176531::1699176534::1::::<><>::
+Purple_Nebula_02-1024x1024.png::CompressedTexture2D::2678322431300706775::1699176531::1699176534::1::::<><>::
+Purple_Nebula_03-1024x1024.png::CompressedTexture2D::8260296219179695890::1699176531::1699176534::1::::<><>::
+Purple_Nebula_04-1024x1024.png::CompressedTexture2D::8350602849778807925::1699176531::1699176534::1::::<><>::
+Purple_Nebula_05-1024x1024.png::CompressedTexture2D::8798287679321559422::1699176531::1699176533::1::::<><>::
+Purple_Nebula_06-1024x1024.png::CompressedTexture2D::3488744513366884202::1699176531::1699176533::1::::<><>::
+Purple_Nebula_07-1024x1024.png::CompressedTexture2D::6411908491672407024::1699176531::1699176533::1::::<><>::
+Purple_Nebula_08-1024x1024.png::CompressedTexture2D::3741000771244506808::1699176531::1699176533::1::::<><>::
 ::res://Projects/::1699006273
-::res://Projects/BaseBullet/::1698798219
-BaseBullet.gd::GDScript::-1::1698798219::0::1::::<>Area2D<>::
-BaseBullet.tscn::PackedScene::4074955629635774137::1698486760::0::1::::<><>::res://Projects/BaseBullet/BaseBullet.gd
+::res://Projects/BaseBullet/::1699200076
+BaseBullet.gd::GDScript::-1::1699200076::0::1::::<>Area2D<>::
+BaseBullet.tscn::PackedScene::4074955629635774137::1699181123::0::1::::<><>::res://Projects/BaseBullet/BaseBullet.gd
 ::res://Projects/BaseBullet/EnemyBomb/::1698942783
 EnemyBomb.tscn::PackedScene::7368557400753601544::1698942783::0::1::::<><>::uid://byb66n8ptad74
 ::res://Projects/BaseBullet/EnemyBullet/::1698942783
 EnemyBullet.tscn::PackedScene::1256888857911392175::1698942783::0::1::::<><>::uid://byb66n8ptad74
-::res://Projects/BaseBullet/PlayerBullet/::1698963243
-PlayerBullet.tscn::PackedScene::1784197822714754780::1698963243::0::1::::<><>::uid://byb66n8ptad74
-::res://Projects/Enemies/::1699006217
-EnemyBasics.gd::GDScript::-1::1699005695::0::1::::<>PathFollow2D<>::
-EnemyBasics.tscn::PackedScene::5379686104567430375::1699006217::0::1::::<><>::uid://bi8a5nxu38rqm::::res://Assets/ships/biomech_1.png<>res://Projects/Enemies/EnemyBasics.gd<>uid://cvso4h50oca60::::res://Assets/ships/biomech_2.png<>uid://r531m5imfit8::::res://Projects/BaseBullet/EnemyBullet/EnemyBullet.tscn<>uid://cb5tnuwdbh6qc::::res://Assets/ships/biomech_3.png<>uid://cpm07tgg1ebxd::::res://Assets/ships/biomech_4.png<>uid://c3c7nrnxc8oyi::::res://Assets/ships/bomber_1.png<>uid://cswyfrrle5sof::::res://Assets/ships/bomber_2.png<>uid://dymsdntl4psbw::::res://Assets/ships/bomber_3.png<>uid://bvkvk5ag0k31u::::res://Assets/ships/zipper_1.png<>uid://cy2sc01tn746j::::res://Assets/ships/zipper_2.png<>uid://e33rsvec8tyr::::res://Assets/ships/zipper_3.png<>uid://djqiek2j2oxom::::res://Projects/HealthBar/HealthBar.tscn
-EnemyBiomech.tscn::PackedScene::3869906214400836156::1698963243::0::1::::<><>::uid://civ7v5wcsbqb4
+::res://Projects/BaseBullet/PlayerBullet/::1699184049
+PlayerBullet.tscn::PackedScene::1784197822714754780::1699184049::0::1::::<><>::uid://byb66n8ptad74::::res://Projects/BaseBullet/BaseBullet.tscn<>uid://rbihumbaj5tl::::res://Assets/lasers/laserBlue03.png
+::res://Projects/Enemies/::1699195128
+EnemyBasics.gd::GDScript::-1::1699195123::0::1::::<>PathFollow2D<>::
+EnemyBasics.tscn::PackedScene::5379686104567430375::1699026266::0::1::::<><>::uid://bi8a5nxu38rqm
+EnemyBiomech.tscn::PackedScene::3869906214400836156::1699026266::0::1::::<><>::uid://civ7v5wcsbqb4
 EnemyBomber.tscn::PackedScene::4382786203779292131::1698963243::0::1::::<><>::uid://civ7v5wcsbqb4
 EnemyZipper.tscn::PackedScene::6177890908849711954::1698963243::0::1::::<><>::uid://civ7v5wcsbqb4
-Saucer.gd::GDScript::-1::1699005813::0::1::::<>PathFollow2D<>::
-saucer.tscn::PackedScene::8275032846455290957::1698942782::0::1::::<><>::uid://b3jx8b6p0dcw2
-::res://Projects/Explosion/::1697971071
-Boom.gd::GDScript::-1::1697971014::0::1::::<>AnimatedSprite2D<>::
-Boom.tscn::PackedScene::4561630811320402258::1697971048::0::1::::<><>::res://Projects/Explosion/Boom.gd<>uid://douun30qu3aj6
-Shot.gd::GDScript::-1::1697971012::0::1::::<>AnimatedSprite2D<>::
-Shot.tscn::PackedScene::8905605959260813820::1697971071::0::1::::<><>::uid://cgmp4t0gabj65
-::res://Projects/GameOver/::1699025176
-GameOver.tscn::PackedScene::5664439163387049730::1699025176::0::1::::<><>::res://Projects/GameOver/GameOver.gd<>uid://sfe6nbk2kd45::::res://Assets/fonts/LuckiestGuy-Regular.ttf<>uid://ly7lrfl6lmda::::res://Assets/fonts/gemunu-libre-v8-latin-700.ttf
-GameOver.gd::GDScript::-1::1699020366::0::1::::<>Control<>::
-::res://Projects/GameUI/::1699020289
-GameUI.gd::GDScript::-1::1699020289::0::1::::<>Control<>::
+Saucer.gd::GDScript::-1::1699195128::0::1::::<>PathFollow2D<>::
+saucer.tscn::PackedScene::8275032846455290957::1699178261::0::1::::<><>::uid://b3jx8b6p0dcw2::::res://Assets/ships/saucer_2.png<>res://Projects/Enemies/Saucer.gd<>uid://djqiek2j2oxom::::res://Projects/HealthBar/HealthBar.tscn<>uid://c6g674p2m5lny::::res://Assets/sounds/misc/sci-fi-door.wav
+::res://Projects/Explosion/::1699200076
+Boom.gd::GDScript::-1::1699196963::0::1::::<>AnimatedSprite2D<>::
+Boom.tscn::PackedScene::4561630811320402258::1699200076::0::1::::<><>::res://Projects/Explosion/Boom.gd<>uid://nieh1tskgpmn::::res://Assets/misc/Explosion.png
+Shot.gd::GDScript::-1::1699199912::0::1::::<>AnimatedSprite2D<>::
+Shot.tscn::PackedScene::8905605959260813820::1699199954::0::1::::<><>::uid://cgmp4t0gabj65::::res://Assets/misc/exp2_0.png<>res://Projects/Explosion/Shot.gd
+::res://Projects/GameOver/::1699197501
+GameOver.gd::GDScript::-1::1699195138::0::1::::<>Control<>::
+GameOver.tscn::PackedScene::5664439163387049730::1699197501::0::1::::<><>::res://Projects/GameOver/GameOver.gd<>uid://bht5m7lwfnbs2::::res://Projects/GameOver/GameOverBlazma.tres<>uid://rtquo0ask0fl::::res://Projects/GameOver/Divinity.tres
+GameOver.tres::LabelSettings::3242201709312012872::1699189137::0::1::::<><>::uid://ly7lrfl6lmda::::res://Assets/fonts/gemunu-libre-v8-latin-700.ttf
+Divinity.tres::LabelSettings::1233441480907536201::1699189213::0::1::::<><>::uid://baglc0wslxvp0::::res://CA/Fonts/1.1_Divinity.Regular.ttf
+GameOverBlazma.tres::LabelSettings::2918810404543143099::1699189689::0::1::::<><>::uid://d32rp5lybsehh::::res://CA/Fonts/Blazma-Regular.ttf
+::res://Projects/GameUI/::1699197501
+GameUI.gd::GDScript::-1::1699181302::0::1::::<>Control<>::
 GameUI.tres::LabelSettings::8673161734045038831::1698943247::0::1::::<><>::uid://ly7lrfl6lmda
-GameUI.tscn::PackedScene::2232569054995980531::1699006127::0::1::::<><>::uid://djqiek2j2oxom::::res://Projects/HealthBar/HealthBar.tscn<>res://Projects/GameUI/GameUI.gd<>uid://dvtlya3aiof00::::res://Projects/GameUI/GameUI.tres
+GameUI.tscn::PackedScene::2232569054995980531::1699197501::0::1::::<><>::uid://djqiek2j2oxom::::res://Projects/HealthBar/HealthBar.tscn<>res://Projects/GameUI/GameUI.gd<>uid://dvtlya3aiof00::::res://Projects/GameUI/GameUI.tres
 ::res://Projects/HealthBar/::1698486759
 HealthBar.gd::GDScript::-1::1698486708::0::1::::<>TextureProgressBar<>::
 HealthBar.tscn::PackedScene::7824485134393100228::1698486759::0::1::::<><>::uid://jygasrrur073
-::res://Projects/HomingMissile/::1698963243
-HomingMissile.gd::GDScript::-1::1698963117::0::1::::<>Area2D<>::
-HomingMissile.tscn::PackedScene::2785495990671070213::1698963243::0::1::::<><>::uid://hiau52lnlsw6
-::res://Projects/Level/::1699025226
-Level.gd::GDScript::-1::1698924204::0::1::::<>Node2D<>::
-Level.tscn::PackedScene::4511341831847001487::1699025226::0::1::::<><>::res://Projects/Level/Level.gd<>uid://ou8k1nilkhrd::::res://Projects/LevelBackground/LevelBackground.tscn<>uid://cfgsjpogq13wl::::res://Projects/Player/Player.tscn<>uid://b3pb332hfa2ah::::res://Projects/Enemies/EnemyBomber.tscn<>uid://bveu14ghx5nyy::::res://Projects/Enemies/EnemyBiomech.tscn<>uid://hpi3jl542rp8::::res://Projects/WaveManager/WaveManager.tscn<>uid://cpkphgnq2oqbn::::res://Projects/SaucerManager/SaucerManager.tscn<>uid://62qc6uf3tev8::::res://Projects/GameUI/GameUI.tscn<>uid://ngwx67va7rh0::::res://Projects/ShakeCam/ShakeCam.tscn<>uid://cmx5qrftxp81c::::res://Projects/GameOver/GameOver.tscn<>uid://ya0irh3jupku::::res://Assets/sounds/loops/Mercury.wav
-::res://Projects/LevelBackground/::1697969489
-LevelBackground.gd::GDScript::-1::1697967935::0::1::::<>ParallaxBackground<>::
-LevelBackground.tscn::PackedScene::1025954270782137121::1697969489::0::1::::<><>::res://Projects/LevelBackground/LevelBackground.gd<>uid://cf5xudpsu7mqf
-::res://Projects/Main/::1699025177
+::res://Projects/HomingMissile/::1699184046
+HomingMissile.gd::GDScript::-1::1699184046::0::1::::<>Area2D<>::
+HomingMissile.tscn::PackedScene::2785495990671070213::1699184006::0::1::::<><>::uid://hiau52lnlsw6::::res://Assets/lasers/spaceMissiles_040.png<>res://Projects/HomingMissile/HomingMissile.gd<>uid://c748kfv0k4617::::res://CA/Main ship weapon - Projectile - Rocket.png
+::res://Projects/Level/::1699197501
+Level.gd::GDScript::-1::1699195052::0::1::::<>Node2D<>::
+Level.tscn::PackedScene::4511341831847001487::1699197501::0::1::::<><>::res://Projects/Level/Level.gd<>uid://ou8k1nilkhrd::::res://Projects/LevelBackground/LevelBackground.tscn<>uid://cfgsjpogq13wl::::res://Projects/Player/Player.tscn<>uid://hpi3jl542rp8::::res://Projects/WaveManager/WaveManager.tscn<>uid://cpkphgnq2oqbn::::res://Projects/SaucerManager/SaucerManager.tscn<>uid://62qc6uf3tev8::::res://Projects/GameUI/GameUI.tscn<>uid://ngwx67va7rh0::::res://Projects/ShakeCam/ShakeCam.tscn<>uid://cmx5qrftxp81c::::res://Projects/GameOver/GameOver.tscn
+::res://Projects/LevelBackground/::1699188697
+LevelBackground.gd::GDScript::-1::1699188697::0::1::::<>ParallaxBackground<>::
+LevelBackground.tscn::PackedScene::1025954270782137121::1699178261::0::1::::<><>::res://Projects/LevelBackground/LevelBackground.gd<>uid://cf5xudpsu7mqf::::res://Assets/backgrounds/spr_stars01.png<>uid://4r8ew5bn5f8a::::res://Assets/backgrounds/spr_stars02.png
+::res://Projects/Main/::1699197501
 Buttons.tres::LabelSettings::5234856564525812164::1697966397::0::1::::<><>::uid://ly7lrfl6lmda
 Main.gd::GDScript::-1::1699025057::0::1::::<>Node2D<>::
-Main.tres::LabelSettings::2273514365330798115::1699019156::0::1::::<><>::uid://sfe6nbk2kd45::::res://Assets/fonts/LuckiestGuy-Regular.ttf
-Main.tscn::PackedScene::6618113077138223356::1699025177::0::1::::<><>::res://Projects/Main/Main.gd<>uid://ct62nxaobe74m::::res://Assets/backgrounds/GalaxyUno.png<>uid://cf5xudpsu7mqf::::res://Assets/backgrounds/spr_stars01.png<>uid://4r8ew5bn5f8a::::res://Assets/backgrounds/spr_stars02.png<>uid://7nkpjsqxkrt0::::res://Projects/Main/Main.tres<>uid://bhvg7v1duoys3::::res://Assets/ui/blue_button00.png<>uid://brk1vvi3m5i5q::::res://Assets/ui/yellow_button00.png<>uid://dx00augy8a22p::::res://Assets/ui/green_button00.png<>uid://cgt2k8ffob45m::::res://Projects/Main/Buttons.tres<>uid://oxec47hmw3m0::::res://Projects/Sun/Sun.tscn<>uid://djdo7abrclbcb::::res://Assets/sounds/loops/TitleScreen.mp3
-::res://Projects/Player/::1699025176
-Player.gd::GDScript::-1::1699005106::0::1::::Player<>Area2D<>::
-Player.tscn::PackedScene::5137281639888226039::1699025176::0::1::::<><>::res://Projects/Player/Player.gd<>uid://bram62lyukkg0::::res://Assets/ships/ships_human_1.png<>uid://0ojqh7knuxge::::res://Projects/BaseBullet/PlayerBullet/PlayerBullet.tscn<>uid://cborpcatio8q2::::res://Projects/Shield/Shield.tscn
-::res://Projects/PowerUp/::1698942783
-PowerUp.gd::GDScript::-1::1698924288::0::1::::<>Area2D<>::
-PowerUp.tscn::PackedScene::9167200638911868417::1698942783::0::1::::<><>::uid://cc3buw8i34und
-::res://Projects/SaucerManager/::1699005799
-SaucerManager.gd::GDScript::-1::1699005799::0::1::::<>Node2D<>::
-SaucerManager.tscn::PackedScene::5847241390932291791::1699004481::0::1::::<><>::res://Projects/SaucerManager/SaucerManager.gd
-::res://Projects/ShakeCam/::1699004480
-ShakeCam.gd::GDScript::-1::1698964099::0::1::::<>Camera2D<>::
+Main.tres::LabelSettings::2273514365330798115::1699019156::0::1::::<><>::uid://sfe6nbk2kd45
+Main.tscn::PackedScene::6618113077138223356::1699197501::0::1::::<><>::res://Projects/Main/Main.gd<>uid://ct62nxaobe74m::::res://Assets/backgrounds/GalaxyUno.png<>uid://cf5xudpsu7mqf::::res://Assets/backgrounds/spr_stars01.png<>uid://4r8ew5bn5f8a::::res://Assets/backgrounds/spr_stars02.png<>uid://bhvg7v1duoys3::::res://Assets/ui/blue_button00.png<>uid://bht5m7lwfnbs2::::res://Projects/GameOver/GameOverBlazma.tres<>uid://brk1vvi3m5i5q::::res://Assets/ui/yellow_button00.png<>uid://dx00augy8a22p::::res://Assets/ui/green_button00.png<>uid://oxec47hmw3m0::::res://Projects/Sun/Sun.tscn<>uid://baglc0wslxvp0::::res://CA/Fonts/1.1_Divinity.Regular.ttf<>uid://dqyww7kyrvnyc::::res://CA/spaceship shooter .ogg
+::res://Projects/Player/::1699197501
+Player.gd::GDScript::-1::1699195082::0::1::::Player<>Area2D<>::
+Player.tscn::PackedScene::5137281639888226039::1699197501::0::1::::<><>::res://Projects/Player/Player.gd<>uid://bram62lyukkg0::::res://Assets/ships/ships_human_1.png<>uid://0ojqh7knuxge::::res://Projects/BaseBullet/PlayerBullet/PlayerBullet.tscn<>uid://cborpcatio8q2::::res://Projects/Shield/Shield.tscn
+::res://Projects/PowerUp/::1699195046
+PowerUp.gd::GDScript::-1::1699195046::0::1::::<>Area2D<>::
+PowerUp.tscn::PackedScene::9167200638911868417::1699184347::0::1::::<><>::uid://cc3buw8i34und::::res://Assets/misc/shield_gold.png<>res://Projects/PowerUp/PowerUp.gd<>uid://ua5eavc06suw::::res://CA/Main Ship - Shields - Front Shield.png
+::res://Projects/SaucerManager/::1699029781
+SaucerManager.gd::GDScript::-1::1699027523::0::1::::<>Node2D<>::
+SaucerManager.tscn::PackedScene::5847241390932291791::1699029781::0::1::::<><>::res://Projects/SaucerManager/SaucerManager.gd
+::res://Projects/ShakeCam/::1699195133
+ShakeCam.gd::GDScript::-1::1699195133::0::1::::<>Camera2D<>::
 ShakeCam.tscn::PackedScene::926219759532471787::1699004480::0::1::::<><>::res://Projects/ShakeCam/ShakeCam.gd
-::res://Projects/Shield/::1698940412
-Shield.gd::GDScript::-1::1698930678::0::1::::<>Area2D<>::
-Shield.tscn::PackedScene::4872990581287927695::1698940412::0::1::::<><>::uid://boc8orwn66ef7
-::res://Projects/Singletons/::1699020214
+::res://Projects/Shield/::1699197501
+Shield.gd::GDScript::-1::1699195162::0::1::::<>Area2D<>::
+Shield.tscn::PackedScene::4872990581287927695::1699197501::0::1::::<><>::uid://boc8orwn66ef7::::res://Assets/shield/spr_shield_small.png<>res://Projects/Shield/Shield.gd
+::res://Projects/Singletons/::1699200050
 GameData.gd::GDScript::-1::1698942395::0::1::::<>Node<>::
-GameManager.gd::GDScript::-1::1699005750::0::1::::<>Node<>::
-ObjectMaker.gd::GDScript::-1::1699020214::0::1::::<>Node<>::
-ScoreManager.gd::GDScript::-1::1699019705::0::1::::<>Node<>::
-SignalManager.gd::GDScript::-1::1698943462::0::1::::<>Node<>::
-SoundManager.gd::GDScript::-1::1697999723::0::1::::<>Node<>::
+GameManager.gd::GDScript::-1::1699195146::0::1::::<>Node<>::
+ObjectMaker.gd::GDScript::-1::1699173321::0::1::::<>Node<>::
+ScoreManager.gd::GDScript::-1::1699182808::0::1::::<>Node<>::
+SignalManager.gd::GDScript::-1::1699182417::0::1::::<>Node<>::
+SoundManager.gd::GDScript::-1::1699200050::0::1::::<>Node<>::
 ::res://Projects/Sun/::1697967976
 Sun.tscn::PackedScene::1030372511780580849::1697967976::0::1::::<><>::uid://di5j744fixmvr
 ::res://Projects/Utils/::1698928279
 Utils.gd::GDScript::-1::1698928279::0::1::::Utils<>RefCounted<>::
-::res://Projects/WaveManager/::1699005257
-WaveManager.gd::GDScript::-1::1699005257::0::1::::<>Node2D<>::
-WaveManager.tscn::PackedScene::522823801054489867::1699004522::0::1::::<><>::res://Projects/WaveManager/WaveManager.gd
-::res://Projects/WaveManager/ShakeCamera/::1698963401
+::res://Projects/WaveManager/::1699197501
+WaveManager.gd::GDScript::-1::1699192505::0::1::::<>Node2D<>::
+WaveManager.tscn::PackedScene::522823801054489867::1699197501::0::1::::<><>::res://Projects/WaveManager/WaveManager.gd

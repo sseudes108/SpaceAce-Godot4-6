@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmfnx1j1y5es7"
+path="res://.godot/imported/DOS-88 - Far away.mp3-a9d4f59b37ff965507db6091db5a5ff4.mp3str"
+
+[deps]
+
+source_file="res://CA/Musics/DOS-88 - Far away.mp3"
+dest_files=["res://.godot/imported/DOS-88 - Far away.mp3-a9d4f59b37ff965507db6091db5a5ff4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

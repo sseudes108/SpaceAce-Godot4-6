@@ -1,16 +1,22 @@
-[gd_scene load_steps=12 format=3 uid="uid://c1j4mc6cyy2nw"]
+[gd_scene load_steps=13 format=3 uid="uid://c1j4mc6cyy2nw"]
 
 [ext_resource type="Script" path="res://Projects/Main/Main.gd" id="1_ivwvq"]
 [ext_resource type="Texture2D" uid="uid://ct62nxaobe74m" path="res://Assets/backgrounds/GalaxyUno.png" id="1_lg54d"]
 [ext_resource type="Texture2D" uid="uid://cf5xudpsu7mqf" path="res://Assets/backgrounds/spr_stars01.png" id="2_8wkyo"]
 [ext_resource type="Texture2D" uid="uid://4r8ew5bn5f8a" path="res://Assets/backgrounds/spr_stars02.png" id="3_mqe76"]
-[ext_resource type="LabelSettings" uid="uid://7nkpjsqxkrt0" path="res://Projects/Main/Main.tres" id="4_ixfyv"]
 [ext_resource type="Texture2D" uid="uid://bhvg7v1duoys3" path="res://Assets/ui/blue_button00.png" id="5_nghau"]
+[ext_resource type="LabelSettings" uid="uid://bht5m7lwfnbs2" path="res://Projects/GameOver/GameOverBlazma.tres" id="5_o7ruc"]
 [ext_resource type="Texture2D" uid="uid://brk1vvi3m5i5q" path="res://Assets/ui/yellow_button00.png" id="6_8g1q2"]
 [ext_resource type="Texture2D" uid="uid://dx00augy8a22p" path="res://Assets/ui/green_button00.png" id="7_n1ruy"]
-[ext_resource type="LabelSettings" uid="uid://cgt2k8ffob45m" path="res://Projects/Main/Buttons.tres" id="8_3gvdu"]
 [ext_resource type="PackedScene" uid="uid://oxec47hmw3m0" path="res://Projects/Sun/Sun.tscn" id="9_b1fl5"]
-[ext_resource type="AudioStream" uid="uid://djdo7abrclbcb" path="res://Assets/sounds/loops/TitleScreen.mp3" id="11_d88hp"]
+[ext_resource type="FontFile" uid="uid://baglc0wslxvp0" path="res://CA/Fonts/1.1_Divinity.Regular.ttf" id="9_hm5ve"]
+[ext_resource type="AudioStream" uid="uid://dqyww7kyrvnyc" path="res://CA/spaceship shooter .ogg" id="11_4gtce"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vfxew"]
+font = ExtResource("9_hm5ve")
+font_size = 33
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ivwvq")
@@ -48,9 +54,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 27
+theme_override_constants/margin_left = 108
 theme_override_constants/margin_top = 216
-theme_override_constants/margin_right = 27
+theme_override_constants/margin_right = 54
 theme_override_constants/margin_bottom = 27
 
 [node name="Game Label" type="Label" parent="CanvasLayer/MarginContainer"]
@@ -58,7 +64,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 text = "Space Ace
 (ish)"
-label_settings = ExtResource("4_ixfyv")
+label_settings = ExtResource("5_o7ruc")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
 layout_mode = 2
@@ -80,11 +86,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Play"
-label_settings = ExtResource("8_3gvdu")
+label_settings = SubResource("LabelSettings_vfxew")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Quit Button" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 texture_normal = ExtResource("5_nghau")
 texture_pressed = ExtResource("6_8g1q2")
@@ -100,18 +107,17 @@ offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Quit"
-label_settings = ExtResource("8_3gvdu")
+label_settings = SubResource("LabelSettings_vfxew")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Sun" parent="." instance=ExtResource("9_b1fl5")]
-position = Vector2(87, 82)
+position = Vector2(213, 189)
 scale = Vector2(0.66, 0.66)
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("11_d88hp")
+stream = ExtResource("11_4gtce")
 volume_db = -8.0
 autoplay = true
 
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/Play Button" to="." method="play"]
-[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/Quit Button" to="." method="quit"]

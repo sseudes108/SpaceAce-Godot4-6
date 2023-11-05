@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://rtquo0ask0fl"]
+
+[ext_resource type="FontFile" uid="uid://baglc0wslxvp0" path="res://CA/Fonts/1.1_Divinity.Regular.ttf" id="1_1p6ed"]
+
+[resource]
+font = ExtResource("1_1p6ed")
+font_size = 54
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)

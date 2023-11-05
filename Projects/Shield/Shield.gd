@@ -27,7 +27,7 @@ func Timeout():
 func disableShield():
 	collisionShape.call_deferred("set", "disable", true)
 	player.shieldActive = false
-	timer.stop
+	#timer.stop
 	hide()
 
 func enableShield():
@@ -45,6 +45,6 @@ func Hit():
 	if health == 0:
 		disableShield()
 
-func AreaEntered(area):
+func AreaEntered(_area):
 	if player.shieldActive == true:
 		Hit()

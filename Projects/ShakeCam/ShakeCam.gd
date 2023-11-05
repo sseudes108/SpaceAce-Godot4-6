@@ -9,7 +9,7 @@ func _ready():
 	SignalManager.onPlayerHit.connect(onPlayerHit)
 	set_process(false)
 
-func _process(delta):
+func _process(_delta):
 	offset = Vector2(
 		shakeOffset.x + getRandomShakeAmount(),
 		shakeOffset.y + getRandomShakeAmount()

@@ -54,7 +54,7 @@ func die():
 	ScoreManager.incrementScore(killPoints)
 	queue_free()
 
-func onCollisionAreaEntered(area):
+func onCollisionAreaEntered(_area):
 	healthBar.takeDamage(damageFromPlayer)
 
 func TryShoot():

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjy6hs7pauta"
+path="res://.godot/imported/Checking Manifest.mp3-64767ec90188edb72729c693755e218b.mp3str"
+
+[deps]
+
+source_file="res://CA/Musics/Checking Manifest.mp3"
+dest_files=["res://.godot/imported/Checking Manifest.mp3-64767ec90188edb72729c693755e218b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

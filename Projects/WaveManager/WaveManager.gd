@@ -41,8 +41,8 @@ func updateSpeeds() -> void:
 	if waveCount % len(pathList) == 0 and waveCount != 0:
 		speedFactor *= 1.05
 		waveGap *= 0.97
-		print("update_speeds(): _wave_count:%s _speed_factor:%s _wave_gap:%s" % [
-			waveCount, speedFactor, waveGap])
+#		print("update_speeds(): _wave_count:%s _speed_factor:%s _wave_gap:%s" % [
+#			waveCount, speedFactor, waveGap])
 
 func startSpawnTimer() -> void:
 	spawnTimer.wait_time = waveGap
@@ -61,27 +61,19 @@ func spawnWave() -> void:
 	var anim = ENEMY_FRAMES[en_type].pick_random()
 	var spawn_data = ENEMY_DATA[en_type]
 	
-	print("\nspawn_wave()\n_last_path_index:", lastPathIndex)
-	print("spawn_data:", spawn_data)
+	#print("\nspawn_wave()\n_last_path_index:", lastPathIndex)
+	#print("spawn_data:", spawn_data)
 	
 	for num in range(randi_range(spawn_data.min, spawn_data.max)):
 		path.add_child(createEnemy(spawn_data.speed * speedFactor, anim, en_type))
 		await get_tree().create_timer(spawn_data.gap + 0.3).timeout
 	
-	print("wave() spawned, waiting:", waveGap)
+	#print("wave() spawned, waiting:", waveGap)
 	waveCount += 1
+	ScoreManager.waveSurvived(1)
 	await get_tree().create_timer(waveGap).timeout
 	updateSpeeds()
 	startSpawnTimer()
 
 func spawnTimerTimeout():
 	spawnWave()
-
-#func spawnWave():
-	#var path = pathList.pick_random()
-	#var enemyType = GameData.ENEMY_TYPE.values().pick_random()
-	#var animation = ENEMY_FRAMES[enemyType].pick_random()
-	
-	#for num in range(4):
-	#	path.add_child(crateEnemy(0.15, ENEMY_FRAMES[enemyType].pick_random(), enemyType))
-	#	await get_tree().create_timer(1).timeout

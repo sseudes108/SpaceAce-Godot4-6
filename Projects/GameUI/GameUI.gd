@@ -3,7 +3,7 @@ extends Control
 @onready var scoreLabel = $ColorRect/MarginContainer/HBoxContainer/ScoreLabel
 @onready var healthBar = $ColorRect/MarginContainer/HBoxContainer/HealthBar
 
-var score: int = 0
+#var score: int = 0
 
 func _ready():
 	SignalManager.onPlayerHit.connect(onPlayerHit)

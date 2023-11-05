@@ -90,4 +90,6 @@ shape = SubResource("CircleShape2D_85jpf")
 [node name="Shield" parent="." instance=ExtResource("4_otf0j")]
 monitoring = true
 
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

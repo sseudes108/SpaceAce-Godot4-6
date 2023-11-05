@@ -21,6 +21,6 @@ func SetPowerUpType(pu: GameData.POWERUP_TYPE):
 func OnScreenExited():
 	queue_free()
 
-func OnAreaEntered(area):
+func OnAreaEntered(_area):
 	SignalManager.powerUpHit.emit(powerUpType)
 	queue_free()

@@ -1,21 +1,45 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmx5qrftxp81c"]
+[gd_scene load_steps=7 format=3 uid="uid://cmx5qrftxp81c"]
 
 [ext_resource type="Script" path="res://Projects/GameOver/GameOver.gd" id="1_8e64s"]
-[ext_resource type="FontFile" uid="uid://sfe6nbk2kd45" path="res://Assets/fonts/LuckiestGuy-Regular.ttf" id="1_dsob4"]
-[ext_resource type="FontFile" uid="uid://ly7lrfl6lmda" path="res://Assets/fonts/gemunu-libre-v8-latin-700.ttf" id="2_lwbv8"]
+[ext_resource type="LabelSettings" uid="uid://bht5m7lwfnbs2" path="res://Projects/GameOver/GameOverBlazma.tres" id="2_hnjg8"]
+[ext_resource type="LabelSettings" uid="uid://rtquo0ask0fl" path="res://Projects/GameOver/Divinity.tres" id="3_7b48u"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_jergi"]
-font = ExtResource("1_dsob4")
-font_size = 108
-font_color = Color(0.701961, 0, 0.0117647, 1)
-outline_size = 9
+[sub_resource type="Animation" id="Animation_fndn8"]
+resource_name = "Blink"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
-[sub_resource type="LabelSettings" id="LabelSettings_7uldd"]
-font = ExtResource("2_lwbv8")
-font_size = 54
-font_color = Color(0.929412, 0.960784, 1, 1)
-outline_size = 7
-outline_color = Color(0, 0, 0, 1)
+[sub_resource type="Animation" id="Animation_gs0bs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_15geu"]
+_data = {
+"Blink": SubResource("Animation_fndn8"),
+"RESET": SubResource("Animation_gs0bs")
+}
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -53,7 +77,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 4
 text = "GAME OVER"
-label_settings = SubResource("LabelSettings_jergi")
+label_settings = ExtResource("2_hnjg8")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -61,21 +85,56 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 text = "SCORE: 0000"
-label_settings = SubResource("LabelSettings_7uldd")
+label_settings = ExtResource("3_7b48u")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Waves" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Waves Survided: 0000"
+label_settings = ExtResource("3_7b48u")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
 
 [node name="BestScore" type="Label" parent="ColorRect/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "BEST SCORE: 0000
 "
-label_settings = SubResource("LabelSettings_7uldd")
+label_settings = ExtResource("3_7b48u")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Try again" type="Label" parent="ColorRect"]
+layout_mode = 2
+offset_left = 338.0
+offset_top = 742.0
+offset_right = 947.0
+offset_bottom = 800.0
+text = "Press shoot to try again"
+label_settings = ExtResource("3_7b48u")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../ColorRect/Try again")
+autoplay = "Blink"
+libraries = {
+"": SubResource("AnimationLibrary_15geu")
+}
 
 [connection signal="timeout" from="Timer" to="." method="onTimeout"]
