@@ -132,7 +132,6 @@ func updateShotDirection():
 	if (aimsAtPlayer == false or
 			is_instance_valid(player) == false):
 		return
-		
 	bulletDirection = global_position.direction_to(
 		player.global_position
 		)
